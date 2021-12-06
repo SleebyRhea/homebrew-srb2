@@ -34,7 +34,7 @@ class Srb2 < Formula
   #   This patch can be safely removed when Issue #696 is fixed and merged
   #   into the most recent release here: https://github.com/STJr/SRB2/releases
   #
-  # Issue: https://git.do.srb2.org/STJr/SRB2
+  # Issue: https://git.do.srb2.org/STJr/SRB2/-/issues/696
   patch :p1, :DATA
 
   def install
