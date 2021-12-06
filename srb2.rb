@@ -93,7 +93,6 @@ index 5d2d4a7..24c2f5b 100644
       end
 
       cp_r "#{buildpath}/build/bin/SRB2SDL2.app", "#{prefix}/SRB2.app"
-      ln_s "#{prefix}/SRB2.app", "/Applications/SRB2.app"
     end
   end
 end
