@@ -35,18 +35,7 @@ class Srb2 < Formula
   #   into the most recent release here: https://github.com/STJr/SRB2/releases
   #
   # Issue: https://git.do.srb2.org/STJr/SRB2
-  patch :p1, 'diff --git a/CMakeLists.txt b/CMakeLists.txt.issue696
-index 5d2d4a7..24c2f5b 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt.issue696
-@@ -108,6 +108,7 @@ endif()
- 
- if(${CMAKE_SYSTEM} MATCHES "Darwin")
- 	add_definitions(-DMACOSX)
-+	set(CMAKE_FIND_FRAMEWORK LAST)
- endif()
- 
- set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")'
+  patch :p1, :DATA
 
   def install
     build_type = "Release" unless build.with? "with-debug"
@@ -106,3 +95,16 @@ index 5d2d4a7..24c2f5b 100644
     EOS
   end
 end
+__END__
+diff --git a/CMakeLists.txt b/CMakeLists.txt.issue696
+index 5d2d4a7..24c2f5b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt.issue696
+@@ -108,6 +108,7 @@ endif()
+ 
+ if(${CMAKE_SYSTEM} MATCHES "Darwin")
+ 	add_definitions(-DMACOSX)
++	set(CMAKE_FIND_FRAMEWORK LAST)
+ endif()
+ 
+ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
