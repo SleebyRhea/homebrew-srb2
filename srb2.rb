@@ -7,7 +7,7 @@ class Srb2 < Formula
 
   option "with-debug", "Set the target build type to Debug"
 
-  keg_only   "This formula builds a .app"
+  keg_only "builds a .app, rather than a command line application"
   depends_on "cmake" => :build
   depends_on "curl"
   depends_on "sdl2"
